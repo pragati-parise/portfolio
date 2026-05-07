@@ -1,6 +1,6 @@
 # Pragati Portfolio
 
-A React portfolio project built with Vite and ready for GitHub + Netlify deployment.
+A React portfolio project built with Vite.
 
 ## Tech Stack
 
