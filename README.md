@@ -20,10 +20,3 @@ A React portfolio project built with Vite and ready for GitHub + Netlify deploym
 1. Install dependencies with `npm install`
 2. Start the dev server with `npm run dev`
 3. Build for production with `npm run build`
-
-## Deploy on Netlify
-
-1. Push the folder to a GitHub repository
-2. Import the repo into Netlify
-3. Set build command to `npm run build`
-4. Set publish directory to `dist`
