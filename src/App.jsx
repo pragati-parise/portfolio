@@ -55,6 +55,15 @@ const projects = [
     github: "https://github.com/pragati-parise/habit-tracker",
     live: "https://habit-tracker-i8cp.onrender.com",
   },
+  {
+    category: "Portfolio",
+    index: "04",
+    title: "Personal Portfolio Website",
+    description:
+      "A responsive personal portfolio website built to showcase my skills, projects, internship experience, certificates, and contact details with a clean React-based interface",
+    github: "https://github.com/pragati-parise/portfolio",
+    live: "https://pragatiiparise.netlify.app/",
+  },
 ];
 
 const certificates = [
