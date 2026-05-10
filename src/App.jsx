@@ -92,6 +92,9 @@ const instagramPath =
   "M7 2.5h10A4.5 4.5 0 0 1 21.5 7v10a4.5 4.5 0 0 1-4.5 4.5H7A4.5 4.5 0 0 1 2.5 17V7A4.5 4.5 0 0 1 7 2.5zm0 1.5A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm10.75 1.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5A3.5 3.5 0 1 0 12 15.5 3.5 3.5 0 0 0 12 8.5z";
 const mailPath =
   "M3 5.5h18a1.5 1.5 0 0 1 1.5 1.5v10A1.5 1.5 0 0 1 21 18.5H3A1.5 1.5 0 0 1 1.5 17V7A1.5 1.5 0 0 1 3 5.5zm0 1.5v.2l9 6.3 9-6.3V7H3zm18 10V9l-8.6 6a.75.75 0 0 1-.8 0L3 9v8h18z";
+const downloadPath =
+  "M12 3.5a.75.75 0 0 1 .75.75v8.19l2.22-2.22a.75.75 0 1 1 1.06 1.06l-3.5 3.5a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.22 2.22V4.25A.75.75 0 0 1 12 3.5zm-7 12a.75.75 0 0 1 .75.75v1.25c0 .14.11.25.25.25h12c.14 0 .25-.11.25-.25v-1.25a.75.75 0 0 1 1.5 0v1.25A1.75 1.75 0 0 1 18 19.25H6A1.75 1.75 0 0 1 4.25 17.5v-1.25A.75.75 0 0 1 5 15.5z";
+const resumeFilePath = "/Pragati-Parise-Resume.pdf";
 
 function IconButton({ href, label, path }) {
   const external = href.startsWith("http");
@@ -138,6 +141,19 @@ function ProjectGithubLink({ href }) {
         </svg>
       </span>
       <span>GitHub</span>
+    </a>
+  );
+}
+
+function ResumeDownloadLink({ className = "button secondary resume-button", children }) {
+  return (
+    <a className={className} href={resumeFilePath} download="Pragati-Parise-Resume.pdf">
+      <span className="resume-link-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="img">
+          <path d={downloadPath} />
+        </svg>
+      </span>
+      {children}
     </a>
   );
 }
@@ -191,6 +207,7 @@ export default function App() {
                 <a className="button primary" href="#projects">
                   View Projects
                 </a>
+                <ResumeDownloadLink>Resume</ResumeDownloadLink>
                 <IconButton href="https://github.com/pragati-parise" label="GitHub" path={githubPath} />
                 <IconButton href="https://www.linkedin.com/in/pragati-parise-36298a267" label="LinkedIn" path={linkedinPath} />
                 <IconButton href="https://www.instagram.com/pragati_parise_" label="Instagram" path={instagramPath} />
@@ -389,6 +406,9 @@ export default function App() {
                   job opportunities where I can contribute and grow
                 </p>
                 <div className="contact-links">
+                  <ResumeDownloadLink className="contact-resume-link">
+                    Resume
+                  </ResumeDownloadLink>
                   <ContactIcon href="mailto:parise.pragati1909@gmail.com" label="Gmail" path={mailPath} />
                   <ContactIcon href="https://github.com/pragati-parise" label="GitHub" path={githubPath} />
                   <ContactIcon href="https://www.linkedin.com/in/pragati-parise-36298a267" label="LinkedIn" path={linkedinPath} />
